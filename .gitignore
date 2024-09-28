@@ -9,6 +9,8 @@
 .env.production.local
 .env.local
 
+dist
+
 # Dependency directories
 node_modules/
 
@@ -27,3 +29,4 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
+

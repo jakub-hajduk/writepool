@@ -2,8 +2,11 @@
   "name": "writepool",
   "version": "0.0.0",
   "description": "Collects files before writing to disk, allowing change tracking, output management, and dry-runs for controlled file handling.",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tsx --test **/*.test.ts",
+    "format": "biome lint --write && biome format --write",
+    "build": "pkgroll"
   },
   "keywords": [
     "files",
@@ -20,5 +23,27 @@
     "url": "https://github.com/jakub-hajduk/writepool.git"
   },
   "author": "Jakub Hajduk<devhajduk@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.2",
+    "@types/node": "^22.7.4",
+    "pkgroll": "^2.5.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  },
+  "files": ["dist"],
+  "exports": {
+    "import": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "require": {
+      "default": "./dist/index.cjs",
+      "types": "./dist/index.d.cts"
+    }
+  },
+  "dependencies": {
+    "colorette": "^2.0.20",
+    "fast-myers-diff": "^3.2.0"
+  }
 }
