@@ -1,0 +1,24 @@
+{
+  "name": "writepool",
+  "version": "0.0.0",
+  "description": "Collects files before writing to disk, allowing change tracking, output management, and dry-runs for controlled file handling.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "files",
+    "changes tracking",
+    "dry-run",
+    "output collection",
+    "writepool",
+    "batch",
+    "output",
+    "files"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakub-hajduk/writepool.git"
+  },
+  "author": "Jakub Hajduk<devhajduk@gmail.com>",
+  "license": "ISC"
+}
