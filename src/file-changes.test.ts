@@ -1,4 +1,4 @@
-import { equal, ok, deepEqual } from 'node:assert';
+import { deepEqual, equal, ok } from 'node:assert';
 import { describe, it } from 'node:test';
 import { FileChanges } from './file-changes';
 

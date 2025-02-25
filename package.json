@@ -4,9 +4,12 @@
   "description": "Collects files before writing to disk, allowing change tracking, output management, and dry-runs for controlled file handling.",
   "type": "module",
   "scripts": {
+    "dev": "pkgroll --watch",
+    "build": "pkgroll",
     "test": "tsx --test **/*.test.ts",
-    "format": "biome lint --write && biome format --write",
-    "build": "pkgroll"
+    "check": "biome check",
+    "fix": "biome check --fix",
+    "release": "pnpm run fix && pnpm run build && changelogen --release --push --publish"
   },
   "keywords": [
     "files",
@@ -20,10 +23,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jakub-hajduk/writepool.git"
+    "url": "https://github.com/jakub-hajduk/writepool"
   },
-  "author": "Jakub Hajduk<devhajduk@gmail.com>",
-  "license": "ISC",
+  "author": {
+    "name": "Jakub Hajduk",
+    "email": "devhajduk@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "colorette": "^2.0.20",
+    "fast-myers-diff": "^3.2.0"
+  },
   "devDependencies": {
     "@biomejs/biome": "^1.9.2",
     "@types/node": "^22.7.4",
@@ -32,18 +42,19 @@
     "typescript": "^5.6.2"
   },
   "files": ["dist"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    "import": {
-      "default": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "require": {
-      "default": "./dist/index.cjs",
-      "types": "./dist/index.d.cts"
+    ".": {
+      "import": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "require": {
+        "default": "./dist/index.cjs",
+        "types": "./dist/index.d.cts"
+      }
     }
-  },
-  "dependencies": {
-    "colorette": "^2.0.20",
-    "fast-myers-diff": "^3.2.0"
   }
 }

@@ -1,4 +1,4 @@
-import { red, green, reset } from 'colorette';
+import { green, red, reset } from 'colorette';
 import { calcSlices } from 'fast-myers-diff';
 import type {
   Change,

@@ -1,3 +1,12 @@
+# OS's:
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
 # IDE's
 .idea
 .vscode
@@ -8,6 +17,7 @@
 .env.test.local
 .env.production.local
 .env.local
+.npmrc
 
 dist
 
@@ -18,7 +28,7 @@ node_modules/
 *.tsbuildinfo
 
 # cache and temporary
-.temp
+.local
 .cache
 
 # Logs
@@ -29,4 +39,3 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
-

@@ -1,5 +1,5 @@
 import { equal, notEqual, ok } from 'node:assert';
-import { it, describe } from 'node:test';
+import { describe, it } from 'node:test';
 import { FileChanges } from './file-changes';
 import { Writepool } from './writepool';
 

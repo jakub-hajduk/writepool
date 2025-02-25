@@ -1,8 +1,8 @@
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { ChangeLog } from './change-log';
 import { outputFileSync } from './output-file-sync';
 import { TypedEventEmitter } from './typed-event-emitter';
-import { ChangeLog } from './change-log';
 
 export interface OutputCollectionOptions {
   outDir: string;
