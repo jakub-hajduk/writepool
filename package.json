@@ -1,6 +1,6 @@
 {
   "name": "writepool",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Collects files before writing to disk, allowing change tracking, output management, and dry-runs for controlled file handling.",
   "type": "module",
   "scripts": {
